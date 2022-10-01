@@ -10,7 +10,7 @@ class Lesson extends Model
 {
     use HasFactory;
 
-    private function remainingCount(): int
+    public function remainingCount(): int
     {
         return $this->capacity - $this->reservations()->count();
     }
